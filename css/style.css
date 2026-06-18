@@ -1,0 +1,314 @@
+
+/*Import Google Fonts - Montserrat for headings, Roboto for body */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap');
+
+/* Base Style + CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #d9d6d6;
+  background-color: #454545; 
+  text-align: center;
+  padding: 20px;
+}
+
+/* Layout container for centered content */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Typography  */
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #d46a8c; /* pink headings per proposal */
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 1.4;
+}
+
+h2 {
+  font-size: 32px; /* 32pt per project proposal*/
+  line-height: 1.5;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+p, li, label {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+/* Fix list styling - remove default bullets + center */
+ul {
+  list-style: none;
+  margin: 20px 0;
+  padding:0 ;
+}
+
+/* Layout Structure */
+header {
+  margin-bottom: 40px;
+}
+
+nav {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 8px 12px;
+  transition:  color 0.3s ease;
+}
+
+/*  Visual Styles + Pseudo-classes */
+nav a {
+  text-decoration: none;
+  color: #e6e2e2;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 8px 12px;
+  transition: color 0.3s ease;
+}
+
+/* Pseudo-classes for interactive elements */
+nav a:hover,
+nav a:focus {
+  color: #990c39; /* pink on hover per design spec */
+  text-decoration: underline;
+}
+
+nav a:active {
+  color: #b84d73;
+}
+
+/* Images - responsive */
+img {
+  max-width: 70%;
+  max-height:  height 150px;
+  height: auto;
+  object-fit: cover
+  ;
+  border-radius: 8px;
+  margin: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styling */
+form {
+  max-width: 70px;
+  margin: 30px auto;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"] {
+  width: 300%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+button[type="submit"] {
+  background-color: #d46a8c;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+  background-color: #b84d73;
+}
+
+/* Footer */
+footer {
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+  font-size: 14px;
+  color: #0b0101;
+}
+
+
+/* Tablet breakpoint */
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav a {
+    display: block;
+    margin: 5px 0;
+  }
+
+  .container {
+    padding: 15px;
+  }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  img {
+    margin: 10px 0;
+  }
+
+  form {
+    max-width: 100%;
+  }
+}
+
+/* Large desktop - optional enhancement */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.product-card {
+  text-align: center;
+}
+
+.product-card img {
+  width: 100%;
+  height: 300px; /* forces same height */
+  object-fit: cover; /* crops nicely instead of squashing */
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.product-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  color: #d46a8c;
+  margin-top: 10px;
+  text-transform: lowercase; /* gives that look */
+  letter-spacing: 0.5px;
+}
+.product-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth animation */
+}
+
+.product-card img:hover {
+  transform: scale(1.03); /* slight zoom in */
+  box-shadow: 0 8px 20px rgba(212, 106, 140, 0.2); /* soft pink shadow */
+}
+
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.product {
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+}
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+.price {
+  font-weight: bold;
+  color: #333;
+  font-size: 1.1em;
+cursor: pointer;
+
+}
