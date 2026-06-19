@@ -19,7 +19,8 @@ For my WEDE project, I built a 5-page website for a business called Dimpho's Scr
 - `enquiry.html` - Customer enquiry form
 - `contact.html` - Contact information  
 - `cart.html` - Shopping cart
-- `style.css` - All custom styling
+- `style.css` - all custom filling
+
 
 ## How to Run
 1. Open the project folder
